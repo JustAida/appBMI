@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtMainHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="เริ่มต้นดูแลสุขภาพของคุณ"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtSubHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="กรอกข้อมูลของคุณเพื่อเริ่มต้น"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtMainHeader" />
+
+        <ImageView
+            android:id="@+id/imgHeart"
+            android:layout_width="49dp"
+            android:layout_height="35dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtSubHeader"
+            app:layout_constraintEnd_toStartOf="@+id/txtMainHeader"
+            app:layout_constraintHorizontal_bias="0.862"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.487" />
+
+        <TextView
+            android:id="@+id/txtGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="เพศ"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSubHeader" />
+
+        <RadioGroup
+            android:id="@+id/rgGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtGender">
+
+            <RadioButton
+                android:id="@+id/rBtnMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ชาย" />
+
+            <RadioButton
+                android:id="@+id/rBtnFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="หญิง" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txtAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="อายุ"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rgGender" />
+
+        <EditText
+            android:id="@+id/edtAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintStart_toEndOf="@+id/txtAge"
+            app:layout_constraintTop_toBottomOf="@+id/rgGender" />
+
+        <TextView
+            android:id="@+id/txtAge2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ปี"
+            app:layout_constraintStart_toEndOf="@+id/edtAge"
+            app:layout_constraintTop_toBottomOf="@+id/rgGender" />
+
+        <TextView
+            android:id="@+id/txtWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="น้ำหนัก"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtAge" />
+
+        <TextView
+            android:id="@+id/txtHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ส่วนสูง"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtWeight"
+            app:layout_constraintTop_toBottomOf="@+id/edtAge" />
+
+        <EditText
+            android:id="@+id/edtWeight"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtWeight" />
+
+        <EditText
+            android:id="@+id/edtHeight"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toEndOf="@+id/edtWeight"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeight" />
+
+        <TextView
+            android:id="@+id/txtWeight2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="กก."
+            app:layout_constraintStart_toEndOf="@+id/edtWeight"
+            app:layout_constraintTop_toBottomOf="@+id/txtWeight" />
+
+        <TextView
+            android:id="@+id/txtHeight2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ซม."
+            app:layout_constraintStart_toEndOf="@+id/edtHeight"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeight" />
+
+        <TextView
+            android:id="@+id/txtLiving"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ระดับการใช้ชีวิต"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtWeight" />
+
+        <Spinner
+            android:id="@+id/spnLiving"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/livingArray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtLiving" />
+
+        <Button
+            android:id="@+id/btnCal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="คำนวณผลลัพธ์"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spnLiving" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

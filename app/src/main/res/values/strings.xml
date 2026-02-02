@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">appBMI</string>
+    <string-array name="livingArray">
+        <item>นั่งทำงานเฉลี่ย</item>
+        <item>placeholder</item>
+    </string-array>
+</resources>
