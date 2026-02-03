@@ -160,10 +160,10 @@
             app:layout_constraintTop_toBottomOf="@+id/edtWeight" />
 
         <Spinner
-            android:id="@+id/spnLiving"
+            android:id="@+id/spnLifestyle"
             android:layout_width="409dp"
             android:layout_height="wrap_content"
-            android:entries="@array/livingArray"
+            android:entries="@array/lifestyleArray"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtLiving" />
 
@@ -174,6 +174,6 @@
             android:text="คำนวณผลลัพธ์"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spnLiving" />
+            app:layout_constraintTop_toBottomOf="@+id/spnLifestyle" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

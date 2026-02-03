@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Result">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <TextView
+            android:id="@+id/txtBMI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BMI (เกณฑ์ตัดสิน)"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtRec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="แนะนำสารอาหารต่อวัน"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtBMIResult" />
+
+        <TextView
+            android:id="@+id/txtProtein"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="โปรตีน"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtRec" />
+
+        <TextView
+            android:id="@+id/txtFat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ไขมัน"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtProtein"
+            app:layout_constraintTop_toBottomOf="@+id/txtRec" />
+
+        <TextView
+            android:id="@+id/txtProteinVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="138"
+            app:layout_constraintStart_toEndOf="@+id/txtProtein"
+            app:layout_constraintTop_toBottomOf="@+id/txtProtein" />
+
+        <TextView
+            android:id="@+id/txtFatValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="92"
+            app:layout_constraintStart_toEndOf="@+id/txtFat"
+            app:layout_constraintTop_toBottomOf="@+id/txtFat" />
+
+        <TextView
+            android:id="@+id/txtFatG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="กรัม"
+            app:layout_constraintStart_toEndOf="@+id/txtFatValue"
+            app:layout_constraintTop_toBottomOf="@+id/txtFatValue" />
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ย้อนกลับ"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCalK" />
+
+        <TextView
+            android:id="@+id/txtProteinG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="กรัม"
+            app:layout_constraintStart_toEndOf="@+id/txtProteinVal"
+            app:layout_constraintTop_toBottomOf="@+id/txtProteinVal" />
+
+        <TextView
+            android:id="@+id/txtCarb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="คาร์บ"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtProteinG" />
+
+        <TextView
+            android:id="@+id/txtCarbVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="345"
+            app:layout_constraintStart_toEndOf="@+id/txtCarb"
+            app:layout_constraintTop_toBottomOf="@+id/txtCarb" />
+
+        <TextView
+            android:id="@+id/txtCarbG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="กรัม"
+            app:layout_constraintStart_toEndOf="@+id/txtCarbVal"
+            app:layout_constraintTop_toBottomOf="@+id/txtCarbVal" />
+
+        <TextView
+            android:id="@+id/txtWater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="น้ำ"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtCarb"
+            app:layout_constraintTop_toBottomOf="@+id/txtFatG" />
+
+        <TextView
+            android:id="@+id/txtWaterVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            app:layout_constraintStart_toEndOf="@+id/txtWater"
+            app:layout_constraintTop_toBottomOf="@+id/txtWater" />
+
+        <TextView
+            android:id="@+id/txtWaterM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="มิลลิลิตร"
+            app:layout_constraintStart_toEndOf="@+id/txtWaterVal"
+            app:layout_constraintTop_toBottomOf="@+id/txtWaterVal" />
+
+        <TextView
+            android:id="@+id/txtCal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="แคลอรี่"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCarbG" />
+
+        <TextView
+            android:id="@+id/txtCalVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="300"
+            app:layout_constraintStart_toEndOf="@+id/txtCal"
+            app:layout_constraintTop_toBottomOf="@+id/txtCal" />
+
+        <TextView
+            android:id="@+id/txtCalK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kcal"
+            app:layout_constraintStart_toEndOf="@+id/txtCalVal"
+            app:layout_constraintTop_toBottomOf="@+id/txtCalVal" />
+
+        <TextView
+            android:id="@+id/txtBMIResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="---------------"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtBMI" />
+
+        <Button
+            android:id="@+id/btnRec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="คำแนะนำ"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCalK" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">appBMI</string>
-    <string-array name="livingArray">
-        <item>นั่งทำงานเฉลี่ย</item>
-        <item>placeholder</item>
+    <string-array name="lifestyleArray">
+        <item>นั่งทำงานเฉยๆ ไม่ค่อยออกกำลังกาย</item>
+        <item>ออกกำลังกายเบาๆ (1-3 วัน/สัปดาห์)</item>
+        <item>ออกกำลังกายปานกลาง (3-5 วัน/สัปดาห์)</item>
+        <item>ออกกำลังกายหนัก (6-7 วัน/สัปดาห์)</item>
     </string-array>
 </resources>

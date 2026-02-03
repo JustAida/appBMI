@@ -7,13 +7,11 @@ data class User(
     val gender: String,
     val age: Int,
     val weight: Int,
-    val height: Int
+    val height: Int,
+    val lifeStyle: String
 ): Parcelable {
     override fun describeContents(): Int {
         TODO("Not yet implemented")
     }
 
-    override fun writeToParcel(p0: Parcel, p1: Int) {
-        TODO("Not yet implemented")
-    }
 }
