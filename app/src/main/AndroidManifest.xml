@@ -12,16 +12,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppBMI">
         <activity
-            android:name=".Result"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".StartupPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".BMIRec5"
+            android:exported="false" />
+        <activity
+            android:name=".BMIRec4"
+            android:exported="false" />
+        <activity
+            android:name=".BMIRec3"
+            android:exported="false" />
+        <activity
+            android:name=".BMIRec2"
+            android:exported="false" />
+        <activity
+            android:name=".BMIRec1"
+            android:exported="false" />
+        <activity
+            android:name=".Result"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false">
+
         </activity>
     </application>
 

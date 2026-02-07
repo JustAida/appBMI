@@ -24,6 +24,7 @@ class Result : AppCompatActivity() {
         val lifestyle = intent.getIntExtra("lifestyle", -1)
 
         val bmi = calculateBMI(weight, height)
+        binding.txtBMIVal.text = "%.3f".format(bmi)
         val bmiStatus = getBMIStatus(bmi)
         binding.txtBMIResult.text = bmiStatus
         val bmr = calculateBMR(weight, height, age, gender)
@@ -33,6 +34,11 @@ class Result : AppCompatActivity() {
 
         binding.btnHome.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnRec.setOnClickListener {
+            val intent = getIntentForBtnRec(bmi, binding)
             startActivity(intent)
         }
 
@@ -85,6 +91,17 @@ class Result : AppCompatActivity() {
         binding.txtCarbVal.text = carbs.roundToInt().toString()
         binding.txtWaterVal.text = water.roundToInt().toString()
         binding.txtCalVal.text = tdee.toInt().toString()
+    }
+
+    fun getIntentForBtnRec(bmi: Double, binding: ActivityResultBinding): Intent {
+        var intent = Intent(this, Result::class.java)
+        return when {
+            bmi < 18.5 -> Intent(this, BMIRec1::class.java)
+            bmi in 18.5..22.9 -> Intent(this, BMIRec2::class.java)
+            bmi in 23.0..24.9 -> Intent(this, BMIRec3::class.java)
+            bmi in 25.0..29.9 -> Intent(this, BMIRec4::class.java)
+            else -> Intent(this, BMIRec5::class.java)
+        }
     }
 
 }

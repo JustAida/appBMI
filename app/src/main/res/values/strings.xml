@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">appBMI</string>
+    <string name="app_name">appHealthU</string>
     <string-array name="lifestyleArray">
         <item>นั่งทำงานเฉยๆ ไม่ค่อยออกกำลังกาย</item>
         <item>ออกกำลังกายเบาๆ (1-3 วัน/สัปดาห์)</item>

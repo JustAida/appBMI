@@ -9,171 +9,225 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/txtMainHeader"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:text="เริ่มต้นดูแลสุขภาพของคุณ"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/txtSubHeader"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="กรอกข้อมูลของคุณเพื่อเริ่มต้น"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtMainHeader" />
-
-        <ImageView
-            android:id="@+id/imgHeart"
-            android:layout_width="49dp"
-            android:layout_height="35dp"
-            app:layout_constraintBottom_toBottomOf="@+id/txtSubHeader"
-            app:layout_constraintEnd_toStartOf="@+id/txtMainHeader"
-            app:layout_constraintHorizontal_bias="0.862"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.487" />
-
-        <TextView
-            android:id="@+id/txtGender"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="เพศ"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtSubHeader" />
+        android:layout_height="match_parent"
+        android:background="#F8F7F3"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <RadioGroup
             android:id="@+id/rgGender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtGender">
+            app:layout_constraintStart_toEndOf="@+id/txtGender"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
 
             <RadioButton
                 android:id="@+id/rBtnMale"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="31dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
                 android:layout_weight="1"
-                android:text="ชาย" />
+                android:text="ชาย"
+                android:textColor="#924C31"
+                android:textSize="12sp" />
 
             <RadioButton
                 android:id="@+id/rBtnFemale"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="หญิง" />
+                android:layout_height="31dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="176dp"
+                android:text="หญิง"
+                android:textColor="#924C31"
+                android:textSize="12sp"
+                tools:ignore="MissingConstraints" />
         </RadioGroup>
 
+        <Button
+            android:id="@+id/btnCal"
+            android:layout_width="232dp"
+            android:layout_height="46dp"
+            android:backgroundTint="#C8EDF6"
+            android:outlineSpotShadowColor="#B8B8B8"
+            android:shadowColor="#6A6A6A"
+            android:text="คำนวณผลลัพธ์"
+            android:textColor="#181818"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spnLifestyle"
+
+            app:layout_constraintVertical_bias="0.272" />
+<!--        tools:ignore="TouchTargetSizeCheck"-->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="299dp"
+            android:layout_height="374dp"
+            android:background="@drawable/bgapphuman"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bgapphuman" />
+
         <TextView
-            android:id="@+id/txtAge"
+            android:id="@+id/txtGender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="อายุ"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="30dp"
+            android:text="เพศ"
+            android:textColor="#924C31"
+            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rgGender" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <EditText
             android:id="@+id/edtAge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="55dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="#446F6F"
             android:ems="10"
             android:inputType="text"
+            android:textColor="#924C31"
+            android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/txtAge"
-            app:layout_constraintTop_toBottomOf="@+id/rgGender" />
+            app:layout_constraintTop_toBottomOf="@+id/txtGender"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/txtAge2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="40dp"
             android:text="ปี"
+            android:textColor="#924C31"
+            android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/edtAge"
-            app:layout_constraintTop_toBottomOf="@+id/rgGender" />
+            app:layout_constraintTop_toBottomOf="@+id/txtGender"
+            tools:ignore="MissingConstraints" />
 
         <TextView
-            android:id="@+id/txtWeight"
+            android:id="@+id/txtAge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="น้ำหนัก"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#FFFFFF"
+            android:foregroundTint="#FFFFFF"
+            android:text="อายุ"
+            android:textColor="#924C31"
+            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edtAge" />
-
-        <TextView
-            android:id="@+id/txtHeight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ส่วนสูง"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/txtWeight"
-            app:layout_constraintTop_toBottomOf="@+id/edtAge" />
+            app:layout_constraintTop_toBottomOf="@+id/txtGender"
+            tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/edtWeight"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
+            android:layout_width="63dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
             android:ems="10"
             android:inputType="text"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtWeight" />
-
-        <EditText
-            android:id="@+id/edtHeight"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.507"
-            app:layout_constraintStart_toEndOf="@+id/edtWeight"
-            app:layout_constraintTop_toBottomOf="@+id/txtHeight" />
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/txtWeight"
+            app:layout_constraintTop_toBottomOf="@+id/edtAge"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/txtWeight2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="20dp"
             android:text="กก."
+            android:textColor="#924C31"
             app:layout_constraintStart_toEndOf="@+id/edtWeight"
-            app:layout_constraintTop_toBottomOf="@+id/txtWeight" />
+            app:layout_constraintTop_toBottomOf="@+id/edtAge"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txtWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="28dp"
+            android:text="น้ำหนัก"
+            android:textColor="#924C31"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtAge"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/txtHeight2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="30dp"
             android:text="ซม."
+            android:textColor="#924C31"
             app:layout_constraintStart_toEndOf="@+id/edtHeight"
-            app:layout_constraintTop_toBottomOf="@+id/txtHeight" />
+            app:layout_constraintTop_toBottomOf="@+id/txtAge"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txtHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="30dp"
+            android:text="ส่วนสูง"
+            android:textColor="#924C31"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/txtWeight2"
+            app:layout_constraintTop_toBottomOf="@+id/txtAge"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/edtHeight"
+            android:layout_width="63dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="19dp"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/txtHeight"
+            app:layout_constraintTop_toBottomOf="@+id/txtAge"
+            tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/txtLiving"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="28dp"
             android:text="ระดับการใช้ชีวิต"
+            android:textColor="#924C31"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edtWeight" />
+            app:layout_constraintTop_toBottomOf="@+id/txtWeight"
+            tools:ignore="MissingConstraints" />
 
         <Spinner
             android:id="@+id/spnLifestyle"
-            android:layout_width="409dp"
-            android:layout_height="wrap_content"
-            android:entries="@array/lifestyleArray"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtLiving" />
-
-        <Button
-            android:id="@+id/btnCal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="คำนวณผลลัพธ์"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="29dp"
+            android:layout_marginStart="44dp"
+            android:backgroundTint="@color/black"
+            android:entries="@array/lifestyleArray"
+            android:outlineAmbientShadowColor="#924C31"
+            android:outlineSpotShadowColor="#924C31"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spnLifestyle" />
+            app:layout_constraintTop_toBottomOf="@+id/txtLiving"
+            tools:ignore="TouchTargetSizeCheck" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

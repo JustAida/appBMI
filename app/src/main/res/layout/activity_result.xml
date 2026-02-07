@@ -8,176 +8,120 @@
     tools:context=".Result">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp">
-
-        <TextView
-            android:id="@+id/txtBMI"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="BMI (เกณฑ์ตัดสิน)"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/txtRec"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="แนะนำสารอาหารต่อวัน"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtBMIResult" />
-
-        <TextView
-            android:id="@+id/txtProtein"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="โปรตีน"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtRec" />
-
-        <TextView
-            android:id="@+id/txtFat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ไขมัน"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/txtProtein"
-            app:layout_constraintTop_toBottomOf="@+id/txtRec" />
+        android:layout_width="399dp"
+        android:layout_height="787dp"
+        android:background="@drawable/bmi02"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/txtProteinVal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="140dp"
             android:text="138"
-            app:layout_constraintStart_toEndOf="@+id/txtProtein"
-            app:layout_constraintTop_toBottomOf="@+id/txtProtein" />
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnRec" />
 
         <TextView
             android:id="@+id/txtFatValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="100dp"
             android:text="92"
-            app:layout_constraintStart_toEndOf="@+id/txtFat"
-            app:layout_constraintTop_toBottomOf="@+id/txtFat" />
-
-        <TextView
-            android:id="@+id/txtFatG"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="กรัม"
-            app:layout_constraintStart_toEndOf="@+id/txtFatValue"
-            app:layout_constraintTop_toBottomOf="@+id/txtFatValue" />
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnRec" />
 
         <Button
             android:id="@+id/btnHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#164F98"
+            android:outlineSpotShadowColor="#B8B8B8"
+            android:shadowColor="#6A6A6A"
             android:text="ย้อนกลับ"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="30dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCalK" />
-
-        <TextView
-            android:id="@+id/txtProteinG"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="กรัม"
-            app:layout_constraintStart_toEndOf="@+id/txtProteinVal"
-            app:layout_constraintTop_toBottomOf="@+id/txtProteinVal" />
-
-        <TextView
-            android:id="@+id/txtCarb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="คาร์บ"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtProteinG" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/txtCarbVal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="68dp"
             android:text="345"
-            app:layout_constraintStart_toEndOf="@+id/txtCarb"
-            app:layout_constraintTop_toBottomOf="@+id/txtCarb" />
-
-        <TextView
-            android:id="@+id/txtCarbG"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="กรัม"
-            app:layout_constraintStart_toEndOf="@+id/txtCarbVal"
-            app:layout_constraintTop_toBottomOf="@+id/txtCarbVal" />
-
-        <TextView
-            android:id="@+id/txtWater"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="น้ำ"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/txtCarb"
-            app:layout_constraintTop_toBottomOf="@+id/txtFatG" />
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtProteinVal" />
 
         <TextView
             android:id="@+id/txtWaterVal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="84dp"
             android:text="100"
-            app:layout_constraintStart_toEndOf="@+id/txtWater"
-            app:layout_constraintTop_toBottomOf="@+id/txtWater" />
-
-        <TextView
-            android:id="@+id/txtWaterM"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="มิลลิลิตร"
-            app:layout_constraintStart_toEndOf="@+id/txtWaterVal"
-            app:layout_constraintTop_toBottomOf="@+id/txtWaterVal" />
-
-        <TextView
-            android:id="@+id/txtCal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="แคลอรี่"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCarbG" />
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtFatValue" />
 
         <TextView
             android:id="@+id/txtCalVal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="72dp"
             android:text="300"
-            app:layout_constraintStart_toEndOf="@+id/txtCal"
-            app:layout_constraintTop_toBottomOf="@+id/txtCal" />
-
-        <TextView
-            android:id="@+id/txtCalK"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="kcal"
-            app:layout_constraintStart_toEndOf="@+id/txtCalVal"
-            app:layout_constraintTop_toBottomOf="@+id/txtCalVal" />
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCarbVal" />
 
         <TextView
             android:id="@+id/txtBMIResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="---------------"
+            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtBMI" />
+            app:layout_constraintTop_toBottomOf="@+id/txtBMIVal" />
 
         <Button
             android:id="@+id/btnRec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:backgroundTint="#8274F9"
+            android:outlineSpotShadowColor="#B8B8B8"
+            android:shadowColor="#6A6A6A"
             android:text="คำแนะนำ"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="30dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCalK" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtBMIResult" />
+
+        <TextView
+            android:id="@+id/txtBMIVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="112dp"
+            android:text="50"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
